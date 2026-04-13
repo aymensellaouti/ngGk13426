@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule
   ],
   providers: [],
+  // C'est le composant qu'on met dans index.html
   bootstrap: [AppComponent]
 })
 export class AppModule { }
