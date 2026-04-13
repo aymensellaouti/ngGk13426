@@ -1,0 +1,10 @@
+<p [hidden]="isHidden">{{name}} works!</p>
+<!-- chaque fois que tu clique sur le bouton
+  appelle showHide()
+-->
+<button
+  (click)="showHide()"
+  class="btn btn-danger">
+  show/hide
+</button>
+<app-second/>
