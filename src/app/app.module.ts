@@ -22,6 +22,8 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { Btc2usdPipe } from './pipes/btc2usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import { LoggerService } from './services/logger.service';
+import { HelloService } from './services/hello.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,11 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    // Voila ce que tu devra fournir (Notre menu)
+    LoggerService,
+    HelloService
+  ],
   // C'est le composant qu'on met dans index.html
   bootstrap: [AppComponent]
 })
