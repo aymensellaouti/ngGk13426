@@ -25,6 +25,7 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { LoggerService } from './services/logger.service';
 import { HelloService } from './services/hello.service';
 import { TodoComponent } from './todo/todo/todo.component';
+import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { TodoComponent } from './todo/todo/todo.component';
     RainbowDirective,
     Btc2usdPipe,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    WeekTodoComponent
   ],
   imports: [
     BrowserModule,

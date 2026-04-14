@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Cv } from '../model/cv.model';
 import { LoggerService } from 'src/app/services/logger.service';
 import { HelloService } from 'src/app/services/hello.service';
+import { TodoService } from 'src/app/todo/service/todo.service';
 
 @Component({
   selector: 'app-cv',
@@ -24,6 +25,7 @@ export class CvComponent {
   ];
   today = new Date();
   selectedCv: Cv | null = null;
+  todoService = inject(TodoService);
  // helloService = new HelloService();
   private helloService = inject(HelloService);
   constructor(
