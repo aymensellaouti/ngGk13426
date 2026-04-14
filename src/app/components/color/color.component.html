@@ -1,5 +1,13 @@
-<p [style.backgroundColor]="color">color works!</p>
+<!--
+  Balises
+  state => attributs de la balise
+-->
+  <!-- Vue  =  f(state) -->
+<p [style.backgroundColor]="color">La couleur est {{ color }}</p>
 
+<!--
+  Evemenements => déclencher un comportement
+-->
 <input
   #colorInput
   (change)="changeColor(colorInput)" type="text" class="form-control">
