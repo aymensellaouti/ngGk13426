@@ -16,7 +16,8 @@ export class CvComponent {
       '12345678',
       20,
       'rotating_card_profile3.png',
-    ),new Cv(
+    ),
+    new Cv(
       2,
       'Stephane',
       'Bailly',
@@ -25,7 +26,23 @@ export class CvComponent {
       20,
       'rotating_card_profile2.png',
     ),
+    new Cv(
+      3,
+      'Aymen',
+      'Sellaouti',
+      'Ingénieur',
+      '12345688',
+      20,
+      'rotating_card_profile2.png',
+    ),
   ];
 
   selectedCv: Cv | null = null;
+
+  onForwardCv(cv: Cv) {
+    this.selectedCv = cv;
+    // for() {
+    //   // ce que je répéte
+    // }
+  }
 }
