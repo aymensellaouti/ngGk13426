@@ -1,3 +1,4 @@
 export const APP_CONFIG = {
-  btcUsd: 74596
+  btcUsd: 74596,
+  defaultImage: 'cv.png'
 }

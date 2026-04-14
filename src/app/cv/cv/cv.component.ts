@@ -24,7 +24,7 @@ export class CvComponent {
       'Ingénieur',
       '12345679',
       20,
-      'rotating_card_profile2.png',
+      '',
     ),
     new Cv(
       3,
@@ -33,7 +33,7 @@ export class CvComponent {
       'Ingénieur',
       '12345688',
       20,
-      'rotating_card_profile2.png',
+      '           ',
     ),
   ];
   today = new Date();
