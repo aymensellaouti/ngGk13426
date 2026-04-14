@@ -36,7 +36,7 @@ export class CvComponent {
       'rotating_card_profile2.png',
     ),
   ];
-
+  today = new Date();
   selectedCv: Cv | null = null;
 
   onForwardCv(cv: Cv) {
