@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -75,6 +76,7 @@ import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    HttpClientModule
   ],
   providers: [
     // Voila ce que tu devra fournir (Notre menu)

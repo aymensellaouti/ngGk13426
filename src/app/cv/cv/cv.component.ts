@@ -18,7 +18,9 @@ export class CvComponent {
   cvs: Cv[] = this.cvService.getCvs();
   today = new Date();
   // selectedCv: Cv | null = null;
+
   selectedCv$ = this.cvService.selectedCv$;
+
   todoService = inject(TodoService);
   toastr = inject(ToastrService);
   // helloService = new HelloService();

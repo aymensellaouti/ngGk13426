@@ -10,6 +10,13 @@
           class="bi bi-trash2"></i>
       </li>
     </ol>
+    <ol class="list-group">
+      <li
+        *ngFor="let todo of todosApi"
+        class="list-group-item">
+        {{todo.title}} : {{todo.userId}}
+      </li>
+    </ol>
   </div>
   <div class="col">
     name:
