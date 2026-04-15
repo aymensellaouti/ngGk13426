@@ -26,6 +26,7 @@ import { LoggerService } from './services/logger.service';
 import { HelloService } from './services/hello.service';
 import { TodoComponent } from './todo/todo/todo.component';
 import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -49,19 +50,20 @@ import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
     Btc2usdPipe,
     DefaultImagePipe,
     TodoComponent,
-    WeekTodoComponent
+    WeekTodoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     // Voila ce que tu devra fournir (Notre menu)
     LoggerService,
-    HelloService
+    HelloService,
   ],
   // C'est le composant qu'on met dans index.html
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
