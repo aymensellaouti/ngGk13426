@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { ToastrModule } from 'ngx-toastr';
+
 import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
@@ -26,7 +30,7 @@ import { LoggerService } from './services/logger.service';
 import { HelloService } from './services/hello.service';
 import { TodoComponent } from './todo/todo/todo.component';
 import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
-import { ToastrModule } from 'ngx-toastr';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,7 @@ import { ToastrModule } from 'ngx-toastr';
     CvsListComponent,
     CvItemComponent,
     CvCardComponent,
+    EmbaucheComponent,
     NgStyleComponent,
     MiniWordComponent,
     NgClassComponent,
@@ -56,6 +61,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
   providers: [
