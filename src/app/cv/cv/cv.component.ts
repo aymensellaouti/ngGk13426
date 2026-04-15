@@ -17,7 +17,8 @@ export class CvComponent {
   //On le consomme
   cvs: Cv[] = this.cvService.getCvs();
   today = new Date();
-  selectedCv: Cv | null = null;
+  // selectedCv: Cv | null = null;
+  selectedCv$ = this.cvService.selectedCv$;
   todoService = inject(TodoService);
   toastr = inject(ToastrService);
   // helloService = new HelloService();
@@ -26,11 +27,15 @@ export class CvComponent {
     this.helloService.sayHello();
     this.toastr.info('Bienvenu dans notre CvTech :D')
     this.loggerService.log('cc je suis le cvComponent');
+    // V1
+    // this.cvService.selectedCv$.subscribe({
+    //   next: cv => this.selectedCv = cv
+    // });
   }
-  onForwardCv(cv: Cv) {
-    this.selectedCv = cv;
-    // for() {
-    //   // ce que je répéte
-    // }
-  }
+  // onForwardCv(cv: Cv) {
+  //   this.selectedCv = cv;
+  //   // for() {
+  //   //   // ce que je répéte
+  //   // }
+  // }
 }

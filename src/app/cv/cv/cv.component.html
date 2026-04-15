@@ -8,7 +8,7 @@
     <app-cvs-list [cvs]="cvs" />
   </div>
   <div class="col">
-    <app-cv-card [cv]="selectedCv" />
+    <app-cv-card [cv]="selectedCv$ | async" />
   </div>
 </div>
 <app-embauche />
