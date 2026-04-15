@@ -20,6 +20,10 @@ export class CvService {
   ];
 
   /**
+   * Le flux des cvs séléctionnés
+   */
+
+  /**
    * Retourne la liste des cvs
    * @returns Cv[]
    */
