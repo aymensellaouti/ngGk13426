@@ -15,6 +15,7 @@ export const uniqueCinValidator = (cvService: CvService): AsyncValidatorFn => {
 
 //Autre syntaxe pour écrire une fonction
 export function uniqueCin1Validator(cvService: CvService): AsyncValidatorFn {
+
   return (control: AbstractControl) => {
     const cin = control.value;
     if (!cin) return of(null);
@@ -23,4 +24,5 @@ export function uniqueCin1Validator(cvService: CvService): AsyncValidatorFn {
       map((cvs) => (cvs.length ? { uniqueCin: 'Le cin existe déjà' } : null)),
     );
   };
+
 }
