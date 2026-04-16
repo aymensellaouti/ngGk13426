@@ -5,5 +5,6 @@ export const APP_CONFIG = {
   authParam: 'access_token',
   // HttpHeaders
   headerParam: 'Authorization',
-  authToken: 'token'
+  authToken: 'token',
+  savedCvForm: 'savedCvForm',
 };

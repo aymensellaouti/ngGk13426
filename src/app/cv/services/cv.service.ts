@@ -55,6 +55,10 @@ export class CvService {
     // const params = new HttpParams().set(APP_CONFIG.authParam, 'Token');
     return this.http.delete<{ count: number }>(APP_API.cv + id);
   }
+
+  addCv(cv: Cv): Observable<Cv> {
+    return this.http.post<Cv>(APP_API.cv, cv);
+  }
   /**
    *
    * Cherche un cv avec son id dans lai liste fictive de cvs
