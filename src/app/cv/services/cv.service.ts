@@ -49,7 +49,7 @@ export class CvService {
   getCvById(id: number): Observable<Cv> {
     return this.http.get<Cv>(APP_API.cv + id);
   }
-  deleteCvById(id: number): Observable<{count: number}> {
+  deleteCvById(id: number): Observable<{ count: number }> {
     // Todo: Ajouter le token pour pouvoir supprimer
 
     // const params = new HttpParams().set(APP_CONFIG.authParam, 'Token');
@@ -59,6 +59,34 @@ export class CvService {
   addCv(cv: Cv): Observable<Cv> {
     return this.http.post<Cv>(APP_API.cv, cv);
   }
+
+  /**
+   *  Permet de récupérer la liste des cvs qui ont le nom passé en paramètre
+   * @param name Cherche les cvs d'un noms donné
+   * @returns
+   */
+  getCvsByName(name: string): Observable<Cv[]> {
+    const params = new HttpParams().set(
+      'filter',
+      `{"where":{"name":{"like":"%${name}%"}}}`,
+    );
+    return this.http.get<Cv[]>(APP_API.cv, { params });
+  }
+
+  /**
+   * Permet de récupérer la liste des cvs qui ont la prompriété égale à la valeur passé
+   * @param property 'le nom de la propriété sur laquelle onfera la recherche
+   * @param value La valeur recherché
+   * @returns
+   */
+  getCvsByProperty(property: string, value: string): Observable<Cv[]> {
+    const params = new HttpParams().set(
+      'filter',
+      `{"where":{"${property}":"${value}"}}`,
+    );
+    return this.http.get<Cv[]>(APP_API.cv, { params });
+  }
+
   /**
    *
    * Cherche un cv avec son id dans lai liste fictive de cvs
