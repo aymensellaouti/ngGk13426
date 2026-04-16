@@ -4,3 +4,4 @@ export const APP_API = {
   cv: 'https://apilb.tridevs.net/api/personnes/',
   login: 'https://apilb.tridevs.net/api/Users/login',
 };
+// admin@gmail.com , 0000

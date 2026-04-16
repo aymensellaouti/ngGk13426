@@ -4,5 +4,6 @@ export const APP_CONFIG = {
   // HttpParams
   authParam: 'access_token',
   // HttpHeaders
-  headerParam: 'Authorization'
+  headerParam: 'Authorization',
+  authToken: 'token'
 };
