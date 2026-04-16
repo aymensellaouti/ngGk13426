@@ -37,12 +37,21 @@ export class AddCvComponent {
     },
   );
   constructor() {
-    this.name.valueChanges.subscribe({
-      next:(value) => console.log(value)
+    this.age.valueChanges.subscribe({
+      next: (age) => {
+        if(age < 18) {
+          this.path?.disable();
+        } else {
+          this.path?.enable();
+        }
+      }
     })
-    this.name.statusChanges.subscribe({
-      next:(status) => console.log({status})
-    })
+    // this.name.valueChanges.subscribe({
+    //   next:(value) => console.log(value)
+    // })
+    // this.name.statusChanges.subscribe({
+    //   next:(status) => console.log({status})
+    // })
   }
   addCv() {}
 
