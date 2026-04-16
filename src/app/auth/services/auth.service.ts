@@ -19,4 +19,10 @@ export class AuthService {
       })
     );
   }
+  logout() {
+    localStorage.removeItem(APP_CONFIG.authToken);
+  }
+  isAuthenticated(): boolean {
+    return !! localStorage.getItem(APP_CONFIG.authToken);
+  }
 }
