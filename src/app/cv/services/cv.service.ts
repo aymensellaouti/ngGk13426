@@ -49,6 +49,7 @@ export class CvService {
     return this.http.get<Cv>(APP_API.cv + id);
   }
   deleteCvById(id: number): Observable<{count: number}> {
+    // Todo: Ajouter le token pour pouvoir supprimer
     return this.http.delete<{ count: number }>(APP_API.cv + id);
   }
   /**
