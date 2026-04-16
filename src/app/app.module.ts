@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 
+
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
@@ -29,8 +30,6 @@ import { Btc2usdPipe } from './pipes/btc2usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { LoggerService } from './services/logger.service';
 import { HelloService } from './services/hello.service';
-import { TodoComponent } from './todo/todo/todo.component';
-import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
@@ -40,6 +39,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
 import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
+import { TodoModule } from './todo/todo.module';
 
 @NgModule({
   declarations: [
@@ -64,8 +64,7 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
     RainbowDirective,
     Btc2usdPipe,
     DefaultImagePipe,
-    TodoComponent,
-    WeekTodoComponent,
+
     NavbarComponent,
     NF404Component,
     TestFormComponent,
@@ -75,6 +74,7 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
   ],
   imports: [
     BrowserModule,
+    TodoModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
