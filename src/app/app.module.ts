@@ -39,6 +39,7 @@ import { TestFormComponent } from './components/forms/test-form/test-form.compon
 import { LoginComponent } from './auth/login/login.component';
 import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     TestFormComponent,
     LoginComponent,
     TestRxjsComponent,
-    AddCvComponent
+    AddCvComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,12 +79,13 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     // Voila ce que tu devra fournir (Notre menu)
     LoggerService,
     HelloService,
+    AuthInterceptorProvider,
   ],
   // C'est le composant qu'on met dans index.html
   bootstrap: [AppComponent],

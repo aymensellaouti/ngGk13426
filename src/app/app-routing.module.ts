@@ -11,6 +11,7 @@ import { APP_ROUTES } from './config/app-routes.config';
 import { NF404Component } from './components/nf404/nf404.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { authGuard } from './auth/guards/auth.guard';
 
 // /cv
 
@@ -18,7 +19,10 @@ const routes: Routes = [
   // Si le user demande l'uri '/', c'est qu'il veut afficher le FirstComponent
   { path: '', component: FirstComponent},
   { path: APP_ROUTES.cv, component: CvComponent},
-  { path: 'cv/add', component: AddCvComponent},
+  { path: 'cv/add', component: AddCvComponent, canActivate: [
+    // On mets les guards de cette route
+    authGuard,
+  ] },
   { path: 'cv/:id', component: DetailsCvComponent},
   { path: 'todo', component: TodoComponent},
   { path: 'login', component: LoginComponent},
