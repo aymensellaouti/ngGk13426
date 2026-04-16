@@ -51,12 +51,9 @@ export class CvService {
   }
   deleteCvById(id: number): Observable<{count: number}> {
     // Todo: Ajouter le token pour pouvoir supprimer
-    const headers = new HttpHeaders().set(
-      APP_CONFIG.headerParam,
-      localStorage.getItem(APP_CONFIG.authToken) ?? ''
-    );
+
     // const params = new HttpParams().set(APP_CONFIG.authParam, 'Token');
-    return this.http.delete<{ count: number }>(APP_API.cv + id, {headers});
+    return this.http.delete<{ count: number }>(APP_API.cv + id);
   }
   /**
    *

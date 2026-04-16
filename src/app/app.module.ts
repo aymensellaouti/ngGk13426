@@ -12,7 +12,7 @@ import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { ColorComponent } from './components/color/color.component';
 import { TwoWayComponent } from './components/two-way/two-way.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
 import { PereComponent } from './commInterCompo/pere/pere.component';
 import { FilsComponent } from './commInterCompo/fils/fils.component';
@@ -80,6 +80,7 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     // Voila ce que tu devra fournir (Notre menu)
