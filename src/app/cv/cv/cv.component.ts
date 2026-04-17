@@ -19,6 +19,8 @@ import { Btc2usdPipe } from '../../shared/pipes/btc2usd.pipe';
     imports: [NgIf, CvsListComponent, CvCardComponent, EmbaucheComponent, AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe, Btc2usdPipe]
 })
 export class CvComponent {
+  private loggerService = inject(LoggerService);
+
   // On commende le cvService
   cvService = inject(CvService);
   //On le consomme
@@ -43,7 +45,10 @@ export class CvComponent {
   toastr = inject(ToastrService);
   // helloService = new HelloService();
   private helloService = inject(HelloService);
-  constructor(private loggerService: LoggerService) {
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+  constructor() {
     this.helloService.sayHello();
     this.toastr.info('Bienvenu dans notre CvTech :D')
     this.loggerService.log('cc je suis le cvComponent');
