@@ -8,9 +8,10 @@ import { ToastrService } from "ngx-toastr";
 import { AuthService } from "src/app/auth/services/auth.service";
 
 @Component({
-  selector: 'app-details-cv',
-  templateUrl: './details-cv.component.html',
-  styleUrls: ['./details-cv.component.css'],
+    selector: 'app-details-cv',
+    templateUrl: './details-cv.component.html',
+    styleUrls: ['./details-cv.component.css'],
+    standalone: false
 })
 export class DetailsCvComponent {
   //cv: Cv | null = null;

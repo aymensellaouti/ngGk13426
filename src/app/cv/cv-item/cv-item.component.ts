@@ -3,9 +3,10 @@ import { Cv } from '../model/cv.model';
 import { CvService } from '../services/cv.service';
 
 @Component({
-  selector: 'app-cv-item',
-  templateUrl: './cv-item.component.html',
-  styleUrls: ['./cv-item.component.css'],
+    selector: 'app-cv-item',
+    templateUrl: './cv-item.component.html',
+    styleUrls: ['./cv-item.component.css'],
+    standalone: false
 })
 export class CvItemComponent {
   @Input({ required: true })

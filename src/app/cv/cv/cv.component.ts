@@ -8,9 +8,10 @@ import { CvService } from '../services/cv.service';
 import { catchError, of } from 'rxjs';
 
 @Component({
-  selector: 'app-cv',
-  templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.css'],
+    selector: 'app-cv',
+    templateUrl: './cv.component.html',
+    styleUrls: ['./cv.component.css'],
+    standalone: false
 })
 export class CvComponent {
   // On commende le cvService

@@ -5,10 +5,11 @@ import { TodoApi } from "../model/todo-api";
 import { ToastrService } from "ngx-toastr";
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css'],
-  providers: [TodoService]
+    selector: 'app-todo',
+    templateUrl: './todo.component.html',
+    styleUrls: ['./todo.component.css'],
+    providers: [TodoService],
+    standalone: false
 })
 export class TodoComponent {
   todoService = inject(TodoService);

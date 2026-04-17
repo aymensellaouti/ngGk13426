@@ -6,9 +6,10 @@ import { ToastrService } from 'ngx-toastr';
 import { APP_ROUTES } from 'src/app/config/app-routes.config';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    standalone: false
 })
 export class LoginComponent {
   authService = inject(AuthService);

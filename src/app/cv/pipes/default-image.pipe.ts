@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { APP_CONFIG } from 'src/app/config/app-const.config';
 
 @Pipe({
-  name: 'defaultImage'
+    name: 'defaultImage',
+    standalone: false
 })
 export class DefaultImagePipe implements PipeTransform {
 

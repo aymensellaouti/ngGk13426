@@ -1,7 +1,8 @@
 import { Directive, HostBinding, HostListener, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+    selector: '[appHighlight]',
+    standalone: false
 })
 export class HighlightDirective implements OnInit {
 

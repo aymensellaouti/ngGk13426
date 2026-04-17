@@ -2,9 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Cv } from '../model/cv.model';
 
 @Component({
-  selector: 'app-cvs-list',
-  templateUrl: './cvs-list.component.html',
-  styleUrls: ['./cvs-list.component.css']
+    selector: 'app-cvs-list',
+    templateUrl: './cvs-list.component.html',
+    styleUrls: ['./cvs-list.component.css'],
+    standalone: false
 })
 export class CvsListComponent {
   @Input()

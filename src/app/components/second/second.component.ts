@@ -2,14 +2,15 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-second',
-  template: `
+    selector: 'app-second',
+    template: `
     <div class="alert alert-dark">
       Hello {{name}}
       <p>test color</p>
     </div>
   `,
-  styles: [``]
+    styles: [``],
+    standalone: false
 })
 export class SecondComponent {
   name = 'anonyme';
