@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-color',
@@ -11,20 +11,19 @@ export class ColorComponent {
   /**
    * @var représente la couleur du background
    */
-  color = this.#defaultColor;
+  color: WritableSignal<string> = signal(this.#defaultColor);
   constructor() {
     // let i = 0;
     // setInterval(() => {
     //   console.log(i++);
-
     // }, 1000)
   }
   //comportement
 
-  getColor() {
-  console.log('In getColor');
-    return this.color;
-  }
+  // getColor() {
+  // console.log('In getColor');
+  //   return this.color;
+  // }
   /**
    * permet de changer la couleur du background
    * @param colorInput : L'input qui représente la couleur
@@ -32,7 +31,7 @@ export class ColorComponent {
   changeColor(colorInput: HTMLInputElement) {
     console.log('In changeColor');
 
-    this.color = colorInput.value;
+    this.color.set(colorInput.value);
     colorInput.value = '';
   }
   /**
@@ -40,9 +39,9 @@ export class ColorComponent {
    */
   reset() {
     console.log('In reset');
-    this.color = this.#defaultColor;
+    this.color.set(this.#defaultColor);
   }
   logColor() {
-    console.log(this.color);
+    console.log(this.color());
   }
 }
