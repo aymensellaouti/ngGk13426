@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -31,43 +31,37 @@ import { LoginComponent } from './auth/login/login.component';
 import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
 import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    FirstComponent,
-    SecondComponent,
-    ColorComponent,
-    TwoWayComponent,
-    RotatingCardComponent,
-    PereComponent,
-    FilsComponent,
-    NgStyleComponent,
-    MiniWordComponent,
-    NgClassComponent,
-    HighlightDirective,
-    RainbowDirective,
-    NavbarComponent,
-    NF404Component,
-    TestFormComponent,
-    LoginComponent,
-    TestRxjsComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    ToastrModule.forRoot(),
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    // Voila ce que tu devra fournir (Notre menu)
-    LoggerService,
-    HelloService,
-    AuthInterceptorProvider,
-  ],
-  // C'est le composant qu'on met dans index.html
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        FirstComponent,
+        SecondComponent,
+        ColorComponent,
+        TwoWayComponent,
+        RotatingCardComponent,
+        PereComponent,
+        FilsComponent,
+        NgStyleComponent,
+        MiniWordComponent,
+        NgClassComponent,
+        HighlightDirective,
+        RainbowDirective,
+        NavbarComponent,
+        NF404Component,
+        TestFormComponent,
+        LoginComponent,
+        TestRxjsComponent,
+    ],
+    // C'est le composant qu'on met dans index.html
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        ToastrModule.forRoot(),
+        ReactiveFormsModule], providers: [
+        // Voila ce que tu devra fournir (Notre menu)
+        LoggerService,
+        HelloService,
+        AuthInterceptorProvider,
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {}
