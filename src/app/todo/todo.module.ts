@@ -4,6 +4,7 @@ import { WeekTodoComponent } from "./week-todo/week-todo.component";
 import { FormsModule } from "@angular/forms";
 import { TodoRoutingModule } from "./todo-routing.module";
 import { CommonModule } from "@angular/common";
+import { SharedModule } from "../shared/shared.module";
 
 
 
@@ -16,7 +17,7 @@ import { CommonModule } from "@angular/common";
   // Tout ce dont mes vues ont besoins
   imports: [
     FormsModule,
-    CommonModule,
+    SharedModule,
     TodoRoutingModule
   ],
   // Ce que je partage avec les autres

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { APP_CONFIG } from '../config/app-const.config';
+import { APP_CONFIG } from '../../config/app-const.config';
 
 @Pipe({
   name: 'btc2usd'
