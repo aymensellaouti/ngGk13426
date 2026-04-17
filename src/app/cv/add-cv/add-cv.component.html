@@ -7,15 +7,19 @@
   <input type="text" class="form-control" formControlName="age" />
   Cin:
   <input type="text" class="form-control" formControlName="cin" />
-  <div *ngIf="cin.getError('uniqueCin') && cin.touched" class="alert alert-danger">
-    {{cin.getError('uniqueCin')}}
-  </div>
+  @if (cin.getError('uniqueCin') && cin.touched) {
+    <div class="alert alert-danger">
+      {{cin.getError('uniqueCin')}}
+    </div>
+  }
   Job: <input type="text" class="form-control" formControlName="job" /> Path:
   <input type="text" class="form-control" formControlName="path" />
 
-  <div *ngIf="form.getError('ageCin')" class="alert alert-danger">
-    {{form.getError('ageCin')}}
-  </div>
+  @if (form.getError('ageCin')) {
+    <div class="alert alert-danger">
+      {{form.getError('ageCin')}}
+    </div>
+  }
   <button [disabled]="form.invalid" class="btn btn-primary" (click)="addCv()">
     add cv
   </button>

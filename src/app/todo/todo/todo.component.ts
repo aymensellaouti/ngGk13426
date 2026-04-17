@@ -3,7 +3,7 @@ import { TodoService } from "../service/todo.service";
 import { Todo } from "../model/todo";
 import { TodoApi } from "../model/todo-api";
 import { ToastrService } from "ngx-toastr";
-import { NgFor } from "@angular/common";
+
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -11,7 +11,7 @@ import { FormsModule } from "@angular/forms";
     templateUrl: './todo.component.html',
     styleUrls: ['./todo.component.css'],
     providers: [TodoService],
-    imports: [NgFor, FormsModule]
+    imports: [FormsModule]
 })
 export class TodoComponent {
   todoService = inject(TodoService);

@@ -6,7 +6,7 @@ import { TodoService } from 'src/app/todo/service/todo.service';
 import { ToastrService } from 'ngx-toastr';
 import { CvService } from '../services/cv.service';
 import { catchError, of } from 'rxjs';
-import { NgIf, AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe } from '@angular/common';
+import { AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe } from '@angular/common';
 import { CvsListComponent } from '../cvs-list/cvs-list.component';
 import { CvCardComponent } from '../cv-card/cv-card.component';
 import { EmbaucheComponent } from '../embauche/embauche.component';
@@ -16,7 +16,7 @@ import { Btc2usdPipe } from '../../shared/pipes/btc2usd.pipe';
     selector: 'app-cv',
     templateUrl: './cv.component.html',
     styleUrls: ['./cv.component.css'],
-    imports: [NgIf, CvsListComponent, CvCardComponent, EmbaucheComponent, AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe, Btc2usdPipe]
+    imports: [CvsListComponent, CvCardComponent, EmbaucheComponent, AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe, Btc2usdPipe]
 })
 export class CvComponent {
   private loggerService = inject(LoggerService);
