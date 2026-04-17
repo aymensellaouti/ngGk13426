@@ -1,6 +1,7 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-ttc',
@@ -13,6 +14,16 @@ export class TtcComponent {
   prixHt = signal(0);
   taxe = signal(18);
   qty = signal(1);
+
+  toastr = inject(ToastrService);
+
+  #alertEffect = effect(() => {
+    if(this.totalTtc() > 800 && this.totalTtc() < 1000) {
+      this.toastr.warning("Faites attention vous vous approcher de votre solde seuil")
+    } else if (this.totalTtc() >= 1000) {
+      this.toastr.error("Vous venez de dépassez votre solde seuil, essayer de serrer la ceinture !!! :(")
+    }
+  })
 
   unitaireTtc = computed(() => this.prixHt() * (100+this.taxe()) / 100);
   discount = computed(() => {
