@@ -7,16 +7,16 @@ import { CvComponent } from './cv/cv.component';
 import { DetailsCvComponent } from './details-cv/details-cv.component';
 
 export const cvRoutes = [
-  { path: APP_ROUTES.cv, component: CvComponent },
+  { path: '', component: CvComponent },
   {
-    path: 'cv/add',
+    path: 'add',
     component: AddCvComponent,
     canActivate: [
       // On mets les guards de cette route
       authGuard,
     ],
   },
-  { path: 'cv/:id', component: DetailsCvComponent },
+  { path: ':id', component: DetailsCvComponent },
 ];
 
 @NgModule({

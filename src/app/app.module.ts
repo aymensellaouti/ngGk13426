@@ -30,7 +30,6 @@ import { TestFormComponent } from './components/forms/test-form/test-form.compon
 import { LoginComponent } from './auth/login/login.component';
 import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
 import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
-import { CvModule } from './cv/cv.module';
 
 @NgModule({
   declarations: [
@@ -55,7 +54,6 @@ import { CvModule } from './cv/cv.module';
   ],
   imports: [
     BrowserModule,
-    CvModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
