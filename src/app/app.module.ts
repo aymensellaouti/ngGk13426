@@ -17,29 +17,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
 import { PereComponent } from './commInterCompo/pere/pere.component';
 import { FilsComponent } from './commInterCompo/fils/fils.component';
-import { CvComponent } from './cv/cv/cv.component';
-import { CvsListComponent } from './cv/cvs-list/cvs-list.component';
-import { CvItemComponent } from './cv/cv-item/cv-item.component';
-import { CvCardComponent } from './cv/cv-card/cv-card.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { Btc2usdPipe } from './pipes/btc2usd.pipe';
-import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { LoggerService } from './services/logger.service';
 import { HelloService } from './services/hello.service';
-import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './components/forms/test-form/test-form.component';
 import { LoginComponent } from './auth/login/login.component';
 import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
-import { AddCvComponent } from './cv/add-cv/add-cv.component';
 import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
 import { TodoModule } from './todo/todo.module';
+import { CvModule } from './cv/cv.module';
 
 @NgModule({
   declarations: [
@@ -51,30 +44,21 @@ import { TodoModule } from './todo/todo.module';
     RotatingCardComponent,
     PereComponent,
     FilsComponent,
-    CvComponent,
-    CvsListComponent,
-    CvItemComponent,
-    CvCardComponent,
-    EmbaucheComponent,
-    DetailsCvComponent,
     NgStyleComponent,
     MiniWordComponent,
     NgClassComponent,
     HighlightDirective,
     RainbowDirective,
-    Btc2usdPipe,
-    DefaultImagePipe,
-
     NavbarComponent,
     NF404Component,
     TestFormComponent,
     LoginComponent,
     TestRxjsComponent,
-    AddCvComponent,
   ],
   imports: [
     BrowserModule,
     TodoModule,
+    CvModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
