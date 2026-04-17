@@ -9,23 +9,22 @@ import { EmbaucheComponent } from './embauche/embauche.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { CvRoutingModule } from './cv-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from '../shared/shared.module';
+
 
 @NgModule({
     imports: [
-        CvRoutingModule,
-        ReactiveFormsModule,
-        FormsModule,
-        SharedModule,
-        //Cv
-        CvComponent,
-        CvsListComponent,
-        CvItemComponent,
-        CvCardComponent,
-        EmbaucheComponent,
-        DetailsCvComponent,
-        AddCvComponent,
-        DefaultImagePipe
-    ],
+    CvRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    //Cv
+    CvComponent,
+    CvsListComponent,
+    CvItemComponent,
+    CvCardComponent,
+    EmbaucheComponent,
+    DetailsCvComponent,
+    AddCvComponent,
+    DefaultImagePipe
+],
 })
 export class CvModule {}
