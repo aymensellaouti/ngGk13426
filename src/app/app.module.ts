@@ -22,7 +22,6 @@ import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
-import { Btc2usdPipe } from './shared/pipes/btc2usd.pipe';
 import { LoggerService } from './services/logger.service';
 import { HelloService } from './services/hello.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -31,7 +30,6 @@ import { TestFormComponent } from './components/forms/test-form/test-form.compon
 import { LoginComponent } from './auth/login/login.component';
 import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
 import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
-import { TodoModule } from './todo/todo.module';
 import { CvModule } from './cv/cv.module';
 
 @NgModule({
@@ -57,7 +55,6 @@ import { CvModule } from './cv/cv.module';
   ],
   imports: [
     BrowserModule,
-    TodoModule,
     CvModule,
     AppRoutingModule,
     FormsModule,
