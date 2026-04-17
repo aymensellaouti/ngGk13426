@@ -8,8 +8,8 @@ describe('TwoWayComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TwoWayComponent]
-    });
+    imports: [TwoWayComponent]
+});
     fixture = TestBed.createComponent(TwoWayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

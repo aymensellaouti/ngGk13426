@@ -31,9 +31,14 @@ import { LoginComponent } from './auth/login/login.component';
 import { TestRxjsComponent } from './rxjs/test-rxjs/test-rxjs.component';
 import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
 
-@NgModule({ declarations: [
-        AppComponent,
-        FirstComponent,
+@NgModule({ declarations: [AppComponent],
+    // C'est le composant qu'on met dans index.html
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        ToastrModule.forRoot(),
+        ReactiveFormsModule, FirstComponent,
         SecondComponent,
         ColorComponent,
         TwoWayComponent,
@@ -49,15 +54,7 @@ import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
         NF404Component,
         TestFormComponent,
         LoginComponent,
-        TestRxjsComponent,
-    ],
-    // C'est le composant qu'on met dans index.html
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        BrowserAnimationsModule,
-        ToastrModule.forRoot(),
-        ReactiveFormsModule], providers: [
+        TestRxjsComponent], providers: [
         // Voila ce que tu devra fournir (Notre menu)
         LoggerService,
         HelloService,

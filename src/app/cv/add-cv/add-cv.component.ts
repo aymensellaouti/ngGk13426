@@ -1,5 +1,5 @@
 import { Component, inject, OnDestroy } from '@angular/core';
-import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { FormBuilder, Validators, AbstractControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { APP_CONFIG } from 'src/app/config/app-const.config';
 import { CvService } from '../services/cv.service';
 import { Cv } from '../model/cv.model';
@@ -7,12 +7,13 @@ import { APP_ROUTES } from 'src/app/config/app-routes.config';
 import { Router } from '@angular/router';
 import { uniqueCinValidator } from 'src/app/validators/unique-cin.validator';
 import { ageCinValidator } from 'src/app/validators/age-cin.validator';
+import { NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-add-cv',
     templateUrl: './add-cv.component.html',
     styleUrls: ['./add-cv.component.css'],
-    standalone: false
+    imports: [FormsModule, ReactiveFormsModule, NgIf]
 })
 export class AddCvComponent implements OnDestroy {
   formBuilder = inject(FormBuilder);

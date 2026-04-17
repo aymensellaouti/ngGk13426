@@ -7,7 +7,7 @@ import { AsyncPipe } from '@angular/common';
     selector: 'app-test-rxjs',
     templateUrl: './test-rxjs.component.html',
     styleUrls: ['./test-rxjs.component.css'],
-    standalone: false
+    imports: [AsyncPipe]
 })
 export class TestRxjsComponent {
   myObservable$: Observable<number>;

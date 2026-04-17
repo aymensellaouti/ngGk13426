@@ -5,11 +5,10 @@ import { Btc2usdPipe } from './pipes/btc2usd.pipe';
 
 
 @NgModule({
-  declarations: [Btc2usdPipe],
-  imports: [CommonModule],
-  exports: [
-    CommonModule,
-    Btc2usdPipe
-  ]
+    imports: [CommonModule, Btc2usdPipe],
+    exports: [
+        CommonModule,
+        Btc2usdPipe
+    ]
 })
 export class SharedModule {}

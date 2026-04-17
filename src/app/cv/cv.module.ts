@@ -12,22 +12,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    //Cv
-    CvComponent,
-    CvsListComponent,
-    CvItemComponent,
-    CvCardComponent,
-    EmbaucheComponent,
-    DetailsCvComponent,
-    AddCvComponent,
-    DefaultImagePipe,
-  ],
-  imports: [
-    CvRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    SharedModule
-  ],
+    imports: [
+        CvRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+        SharedModule,
+        //Cv
+        CvComponent,
+        CvsListComponent,
+        CvItemComponent,
+        CvCardComponent,
+        EmbaucheComponent,
+        DetailsCvComponent,
+        AddCvComponent,
+        DefaultImagePipe
+    ],
 })
 export class CvModule {}

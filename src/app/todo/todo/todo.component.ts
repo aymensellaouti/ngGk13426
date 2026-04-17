@@ -3,13 +3,15 @@ import { TodoService } from "../service/todo.service";
 import { Todo } from "../model/todo";
 import { TodoApi } from "../model/todo-api";
 import { ToastrService } from "ngx-toastr";
+import { NgFor } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
 @Component({
     selector: 'app-todo',
     templateUrl: './todo.component.html',
     styleUrls: ['./todo.component.css'],
     providers: [TodoService],
-    standalone: false
+    imports: [NgFor, FormsModule]
 })
 export class TodoComponent {
   todoService = inject(TodoService);

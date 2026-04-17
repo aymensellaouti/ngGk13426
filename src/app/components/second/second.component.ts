@@ -9,8 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
       <p>test color</p>
     </div>
   `,
-    styles: [``],
-    standalone: false
+    styles: [``]
 })
 export class SecondComponent {
   name = 'anonyme';
