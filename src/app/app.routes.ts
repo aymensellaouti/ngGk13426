@@ -15,6 +15,7 @@ export const routes: Routes = [
   { path: 'login', loadComponent: () => import('./auth/login/login.component').then(m => m.LoginComponent)},
   { path: 'word', loadComponent: () => import('./directives/mini-word/mini-word.component').then(m => m.MiniWordComponent)},
   { path: 'color', loadComponent: () => import('./components/color/color.component').then(m => m.ColorComponent)},
+  { path: 'ttc', loadComponent: () => import('./signals/ttc/ttc.component').then(m => m.TtcComponent)},
   { path: 'todo', loadChildren: () => import('./todo/todo.routes').then(
     module => module.todoRoutes
   )},
